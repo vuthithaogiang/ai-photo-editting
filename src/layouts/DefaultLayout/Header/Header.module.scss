@@ -1,5 +1,4 @@
 @use '/src/scss/abstract/' as abstract;
-@import '/src/scss/abstract/';
 
 .wrapper {
       background-color: #000;
@@ -12,7 +11,11 @@
       z-index: 99;
 
       @include abstract.breakpoint(xxl) {
-            background-color: red;
+            padding: 24px 0;
+      }
+
+      @include abstract.breakpoint(md) {
+            padding: 16px 0;
       }
 }
 
@@ -27,5 +30,18 @@
             display: flex;
             align-items: center;
             gap: 10px;
+
+            button:nth-child(2) {
+                  @include abstract.breakpoint(lg) {
+                        display: none;
+                  }
+            }
+      }
+}
+.more-btn {
+      display: none;
+
+      @include abstract.breakpoint(lg) {
+            display: block;
       }
 }

@@ -1,3 +1,5 @@
+@use '../abstract';
+
 .navbar {
       &__list {
             display: flex;
@@ -32,5 +34,9 @@
       &__item:hover {
             border-radius: 38px;
             background: rgba(255, 255, 255, 0.1);
+      }
+
+      @include abstract.breakpoint(lg) {
+            display: none;
       }
 }

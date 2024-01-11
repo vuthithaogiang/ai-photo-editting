@@ -30,6 +30,9 @@ function Header() {
             <header className={cx('wrapper')}>
                   <div className="container">
                         <div className={cx('header-inner')}>
+                              <button className={cx('more-btn')}>
+                                    <img alt="" src={icons.menu} />
+                              </button>
                               <div className="logo" onClick={() => navigate('/')}>
                                     <img className="logo__img" src={icons.logo} alt="" />
                                     <h2 className="logo__title">PixelPro</h2>

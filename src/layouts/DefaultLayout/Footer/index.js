@@ -1,5 +1,5 @@
 function Footer() {
-      return <footer style={{ minHeight: '8000px' }}>Footer</footer>;
+      return <footer>Footer</footer>;
 }
 
 export default Footer;
