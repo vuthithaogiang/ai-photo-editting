@@ -7,6 +7,7 @@ const images = {
       thumbIntroCard1: require('./thumb-intro-card-1.png'),
       thumbIntroCard2: require('./thumb-intro-card-2.png'),
       thumbIntroCard3: require('./thumb-intro-card-3.png'),
+      serviceThumb1: require('./service-thumb-1.png'),
 };
 
 export default images;

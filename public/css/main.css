@@ -1205,4 +1205,21 @@ select {
   transform: translate(-50%, -50%);
 }
 
+.service-card {
+  width: 100%;
+}
+.service-card__inner {
+  display: flex;
+  align-items: center;
+}
+.service-card__wrap-thumb {
+  flex: 1;
+  flex-shrink: 0;
+}
+.service-card__wrap-thumb img {
+  flex-shrink: 0;
+  width: min(570px, 100%);
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */
