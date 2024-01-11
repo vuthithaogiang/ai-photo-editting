@@ -1,0 +1,51 @@
+@use '/src/scss/abstract/' as abstract;
+
+.wrapper {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 60px 0 48px 0;
+      overflow: hidden;
+
+      @include abstract.breakpoint(md) {
+            padding: 40px 0 20px 0;
+      }
+}
+
+.heading {
+      text-align: center;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.17;
+      margin-bottom: 26px;
+
+      @include abstract.breakpoint(md) {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+      }
+}
+
+.partners {
+      display: flex;
+      align-items: center;
+      gap: 54px;
+
+      scroll-behavior: smooth;
+
+      @include abstract.breakpoint(md) {
+            gap: 36px;
+      }
+}
+
+.partner {
+      flex-shrink: 0;
+      width: 155px;
+      user-select: none;
+
+      @include abstract.breakpoint(md) {
+            width: 80px;
+      }
+      img {
+            width: 100%;
+            object-fit: contain;
+      }
+}
