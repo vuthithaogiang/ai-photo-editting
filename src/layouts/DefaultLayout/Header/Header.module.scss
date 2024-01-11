@@ -1,0 +1,31 @@
+@use '/src/scss/abstract/' as abstract;
+@import '/src/scss/abstract/';
+
+.wrapper {
+      background-color: #000;
+      color: #fff;
+      padding: 30px 0;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+
+      @include abstract.breakpoint(xxl) {
+            background-color: red;
+      }
+}
+
+.header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.top-actions {
+      &__inner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+      }
+}

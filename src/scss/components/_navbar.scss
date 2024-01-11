@@ -1,0 +1,36 @@
+.navbar {
+      &__list {
+            display: flex;
+            align-items: center;
+      }
+      &__icon {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility, opacity;
+            transition-duration: 0.3s;
+      }
+
+      &__item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 18px;
+            cursor: pointer;
+
+            span {
+                  font-size: 1.6rem;
+                  font-weight: 400;
+                  line-height: 1.75;
+            }
+      }
+
+      &__item:hover &__icon {
+            visibility: visible;
+            opacity: 1;
+      }
+
+      &__item:hover {
+            border-radius: 38px;
+            background: rgba(255, 255, 255, 0.1);
+      }
+}
