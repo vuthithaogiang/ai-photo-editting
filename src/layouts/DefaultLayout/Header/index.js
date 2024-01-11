@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import icons from '~/assets/icons';
 import { useNavigate } from 'react-router-dom';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
@@ -10,6 +11,28 @@ function Header() {
             {
                   title: 'Products',
                   path: '/products',
+                  children: [
+                        {
+                              subTitle: 'Remove BG',
+                              thumb: images.removeBgThumb,
+                              path: '/',
+                        },
+                        {
+                              subTitle: 'Remove Objects',
+                              thumb: images.removeObjetsThumb,
+                              path: '/',
+                        },
+                        {
+                              subTitle: 'Upscale',
+                              thumb: images.upscaleThumb,
+                              path: '/',
+                        },
+                        {
+                              subTitle: 'Relight',
+                              thumb: images.relightThumb,
+                              path: '/',
+                        },
+                  ],
             },
             {
                   title: 'Pricing',
@@ -42,12 +65,54 @@ function Header() {
                                     <ul className="navbar__list">
                                           {NAVBAR_ITEMS.map((item) => (
                                                 <li
-                                                      key={item.title}
                                                       className="navbar__item"
-                                                      onClick={() => navigate(item.path)}
+                                                      key={item.title}
+                                                      //       onClick={() => navigate(item.path)}
                                                 >
-                                                      <span className="navbar__link">{item.title}</span>
-                                                      <img alt="" src={icons.arrowDown} className="navbar__icon" />
+                                                      <div className="navbar__link">
+                                                            <span>{item.title}</span>
+                                                            {item.children ? (
+                                                                  <>
+                                                                        <img
+                                                                              alt=""
+                                                                              src={icons.arrowDown}
+                                                                              className="navbar__icon"
+                                                                        />
+                                                                  </>
+                                                            ) : (
+                                                                  <></>
+                                                            )}
+                                                      </div>
+
+                                                      {item.children ? (
+                                                            <>
+                                                                  <div className="dropdown">
+                                                                        <div className="dropdown__inner">
+                                                                              <div className="dropdown__list">
+                                                                                    {item.children.map((subLink) => (
+                                                                                          <div
+                                                                                                key={subLink.subTitle}
+                                                                                                className="dropdown__wrap-thumb"
+                                                                                          >
+                                                                                                <img
+                                                                                                      alt=""
+                                                                                                      src={
+                                                                                                            subLink.thumb
+                                                                                                      }
+                                                                                                      className="dropdown__img"
+                                                                                                />
+                                                                                                <h3 className="dropdown__title">
+                                                                                                      {subLink.subTitle}
+                                                                                                </h3>
+                                                                                          </div>
+                                                                                    ))}
+                                                                              </div>
+                                                                        </div>
+                                                                  </div>
+                                                            </>
+                                                      ) : (
+                                                            <></>
+                                                      )}
                                                 </li>
                                           ))}
                                     </ul>

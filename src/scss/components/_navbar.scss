@@ -1,18 +1,25 @@
 @use '../abstract';
 
 .navbar {
+      position: relative;
+
       &__list {
             display: flex;
             align-items: center;
       }
       &__icon {
+            display: block;
             visibility: hidden;
             opacity: 0;
             transition: visibility, opacity;
             transition-duration: 0.3s;
       }
 
-      &__item {
+      &__item:hover div.dropdown {
+            display: block !important;
+      }
+
+      &__link {
             display: flex;
             align-items: center;
             gap: 4px;
@@ -20,18 +27,19 @@
             cursor: pointer;
 
             span {
+                  display: block;
                   font-size: 1.6rem;
                   font-weight: 400;
                   line-height: 1.75;
             }
       }
 
-      &__item:hover &__icon {
+      &__link:hover &__icon {
             visibility: visible;
             opacity: 1;
       }
 
-      &__item:hover {
+      &__link:hover {
             border-radius: 38px;
             background: rgba(255, 255, 255, 0.1);
       }
