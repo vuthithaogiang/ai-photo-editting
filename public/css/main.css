@@ -1157,6 +1157,13 @@ select {
   color: #000;
 }
 
+.button.primary {
+  font-size: 1.6rem;
+  padding: 12px 32px;
+  border-radius: 99px;
+  background-color: var(--Navy-Blue, #0058ff);
+}
+
 .dropdown {
   position: absolute;
   left: -94px;

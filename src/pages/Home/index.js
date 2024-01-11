@@ -1,5 +1,11 @@
+import BigSection from './BigSection';
+
 function Home() {
-        return <h2>Home Page</h2>;
+      return (
+            <main>
+                  <BigSection />
+            </main>
+      );
 }
 
 export default Home;
