@@ -4,7 +4,7 @@
       max-width: 970px;
       margin: 0 auto;
 
-      @include abstract.breakpoint(md) {
+      @include abstract.breakpoint(lg) {
             max-width: 100%;
       }
 }

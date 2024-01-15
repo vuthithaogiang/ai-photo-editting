@@ -1206,11 +1206,102 @@ select {
 }
 
 .service-card {
-  width: 100%;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .service-card {
+    padding: 30px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card {
+    padding: 15px 0;
+  }
 }
 .service-card__inner {
   display: flex;
   align-items: center;
+  gap: 98px;
+}
+@media (max-width: 991.98px) {
+  .service-card__inner {
+    gap: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card__inner {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card__inner.row-not-reverse {
+    flex-direction: column;
+  }
+}
+.service-card__info {
+  flex: 1;
+}
+.service-card__title {
+  font-size: 6.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.19;
+}
+@media (max-width: 991.98px) {
+  .service-card__title {
+    font-size: 4.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card__title {
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+}
+.service-card__strong--blue {
+  background: linear-gradient(100deg, #0095ff 46.49%, #0058ff 71.15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-card__strong--purple {
+  background: linear-gradient(102deg, #722fff 4.6%, #b12eff 80.31%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-card__strong--orrange {
+  background: linear-gradient(88deg, #ffcb01 4.62%, #ff5993 40.95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-card__btn {
+  margin-top: 36px;
+}
+@media (max-width: 767.98px) {
+  .service-card__btn {
+    margin-top: 16px;
+  }
+}
+.service-card__desc {
+  margin-top: 18px;
+  color: #c3c3c3;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75;
+}
+@media (max-width: 991.98px) {
+  .service-card__desc {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card__desc {
+    font-size: 1.4rem;
+  }
 }
 .service-card__wrap-thumb {
   flex: 1;
