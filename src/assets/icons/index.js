@@ -10,6 +10,11 @@ const icons = {
       instagram: require('./instagram.svg').default,
       shoppee: require('./shopee.svg').default,
       shopify: require('./shopify.svg').default,
+      facebook: require('./facebook.svg').default,
+      twitter: require('./twitter.svg').default,
+      youtube: require('./youtube.svg').default,
+      instagramFooter: require('./instagam-footer.svg').default,
+      linedin: require('./linkedin.svg').default,
 };
 
 export default icons;
