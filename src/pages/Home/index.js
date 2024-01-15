@@ -1,6 +1,7 @@
 import BigSection from './BigSection';
 import Partners from './Partners';
 import Services from './Services';
+import Features from './Features';
 
 function Home() {
       return (
@@ -8,6 +9,7 @@ function Home() {
                   <BigSection />
                   <Partners />
                   <Services />
+                  <Features />
             </main>
       );
 }

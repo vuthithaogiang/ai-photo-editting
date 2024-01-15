@@ -15,6 +15,10 @@ const icons = {
       youtube: require('./youtube.svg').default,
       instagramFooter: require('./instagam-footer.svg').default,
       linedin: require('./linkedin.svg').default,
+      featureIcon1: require('./feature-icon-1.svg').default,
+      featureIcon2: require('./feature-icon-2.svg').default,
+      featureIcon3: require('./feature-icon-3.svg').default,
+      featureIcon4: require('./feature-icon-4.svg').default,
 };
 
 export default icons;
