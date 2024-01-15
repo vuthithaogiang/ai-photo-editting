@@ -8,7 +8,7 @@ function Features() {
             <div className={cx('wrapper')}>
                   <div className="container">
                         <div className="row row-cols-2 row-cols-lg-1">
-                              <div className="column">Column</div>
+                              <div className="column d-none d-lg-block">Column</div>
                               <div className="column">Column</div>
                               <div className="column">Column</div>
                               <div className="column">Column</div>
