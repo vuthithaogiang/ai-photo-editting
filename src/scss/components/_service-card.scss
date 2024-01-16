@@ -54,24 +54,60 @@
 
       &__strong {
             &--blue {
+                  font-size: 6.2rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 1.19;
                   background: linear-gradient(100deg, #0095ff 46.49%, #0058ff 71.15%);
                   background-clip: text;
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
+                  @include abstract.breakpoint(lg) {
+                        font-size: 4.2rem;
+                  }
+
+                  @include abstract.breakpoint(md) {
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                  }
             }
 
             &--purple {
+                  font-size: 6.2rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 1.19;
                   background: linear-gradient(102deg, #722fff 4.6%, #b12eff 80.31%);
                   background-clip: text;
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
+                  @include abstract.breakpoint(lg) {
+                        font-size: 4.2rem;
+                  }
+
+                  @include abstract.breakpoint(md) {
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                  }
             }
 
             &--orrange {
+                  font-size: 6.2rem;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 1.19;
                   background: linear-gradient(88deg, #ffcb01 4.62%, #ff5993 40.95%);
                   background-clip: text;
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
+                  @include abstract.breakpoint(lg) {
+                        font-size: 4.2rem;
+                  }
+
+                  @include abstract.breakpoint(md) {
+                        font-size: 3.2rem;
+                        font-weight: 500;
+                  }
             }
       }
 

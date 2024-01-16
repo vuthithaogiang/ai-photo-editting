@@ -19,6 +19,10 @@ const icons = {
       featureIcon2: require('./feature-icon-2.svg').default,
       featureIcon3: require('./feature-icon-3.svg').default,
       featureIcon4: require('./feature-icon-4.svg').default,
+      arrowRight: require('./arrow-right.svg').default,
+      logoReview1: require('./logo-review-1.svg').default,
+      logoReview2: require('./logo-review-2.svg').default,
+      logoReview3: require('./logo-review-3.svg').default,
 };
 
 export default icons;

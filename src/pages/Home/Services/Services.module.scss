@@ -30,10 +30,22 @@
             text-align: left;
       }
       strong {
+            font-size: 7.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.2;
             background: linear-gradient(96deg, #ac2ef8 37.51%, #ff5993 86.86%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @include abstract.breakpoint(lg) {
+                  font-size: 5.4rem;
+            }
+
+            @include abstract.breakpoint(md) {
+                  font-size: 3.8rem;
+                  text-align: left;
+            }
       }
 }
 

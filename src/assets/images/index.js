@@ -10,6 +10,9 @@ const images = {
       serviceThumb1: require('./service-thumb-1.png'),
       serviceThumb2: require('./service-thumb-2.png'),
       serviceThumb3: require('./service-thumb-3.png'),
+      avatar1: require('./avatar-1.png'),
+      avatar2: require('./avatar-2.png'),
+      avatar3: require('./avatar-3.png'),
 };
 
 export default images;
