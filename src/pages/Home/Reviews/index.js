@@ -57,8 +57,16 @@ function Reviews() {
                   position: 'Co Founder at webdesign.gdn',
                   content: '“With Popwork, I have access to all the important information of my team. With Popwork, I have access to all the important. With Popwork, I have access to all the important information of my team. With Popwork”',
             },
+            {
+                  id: 7,
+                  avatar: images.avatar1,
+                  logo: icons.logoReview1,
+                  name: 'Aliénor Behaghel',
+                  position: 'Co Founder at webdesign.gdn',
+                  content: '“With Popwork, I have access to all the important information of my team. With Popwork, I have access to all the important. With Popwork, I have access to all the important information of my team. With Popwork”',
+            },
       ];
-      const [slideIndex, setSlideIndex] = useState(1);
+      const [slideIndex, setSlideIndex] = useState(2);
       const [width, setWidth] = useState(0);
       const [start, setStart] = useState(0);
       const [change, setChange] = useState(9);
@@ -118,6 +126,12 @@ function Reviews() {
                   slideRef.current.scrollLeft = slideIndex > numOfthumb ? (slideIndex - 1) * width : 0;
             }
       }, [width, slideIndex]);
+
+      useEffect(() => {
+            if (document.body.clientWidth < 769) {
+                  setSlideIndex(1);
+            }
+      }, []);
       return (
             <div className={cx('wrapper')}>
                   <div className="container">

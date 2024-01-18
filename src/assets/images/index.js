@@ -13,6 +13,10 @@ const images = {
       avatar1: require('./avatar-1.png'),
       avatar2: require('./avatar-2.png'),
       avatar3: require('./avatar-3.png'),
+      blogThumbnaail1: require('./blog-thumbnail-1.png'),
+      blogThumbnail2: require('./blog-thumbnail-2.png'),
+      authorBlogAvatar1: require('./author-blog-avatar-1.png'),
+      authorBlogAvatar2: require('./author-blog-avatar-2.png'),
 };
 
 export default images;

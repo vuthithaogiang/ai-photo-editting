@@ -3,6 +3,7 @@ import Partners from './Partners';
 import Services from './Services';
 import Features from './Features';
 import Reviews from './Reviews';
+import Blogs from '~/components/Blogs';
 
 function Home() {
       return (
@@ -12,6 +13,7 @@ function Home() {
                   <Services />
                   <Features />
                   <Reviews />
+                  <Blogs />
             </main>
       );
 }
