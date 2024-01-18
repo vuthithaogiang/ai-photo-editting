@@ -5,6 +5,7 @@ import Features from './Features';
 import Reviews from './Reviews';
 import Blogs from '~/components/Blogs';
 import QuestionsAndAnswers from '~/components/QuestionsAndAnswers';
+import Dowload from '~/components/Dowload';
 
 function Home() {
       return (
@@ -16,6 +17,7 @@ function Home() {
                   <Reviews />
                   <Blogs />
                   <QuestionsAndAnswers />
+                  <Dowload />
             </main>
       );
 }

@@ -25,6 +25,8 @@ const icons = {
       logoReview3: require('./logo-review-3.svg').default,
       plus: require('./plus.svg').default,
       minus: require('./minus.svg').default,
+      appleStore: require('./apple-store.svg').default,
+      googlePlay: require('./google-play.svg').default,
 };
 
 export default icons;
