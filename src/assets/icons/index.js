@@ -27,6 +27,7 @@ const icons = {
       minus: require('./minus.svg').default,
       appleStore: require('./apple-store.svg').default,
       googlePlay: require('./google-play.svg').default,
+      uploadFile: require('./upload-file.svg').default,
 };
 
 export default icons;

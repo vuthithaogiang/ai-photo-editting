@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import icons from '~/assets/icons';
 import { useNavigate } from 'react-router-dom';
 import images from '~/assets/images';
+import React, { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -49,11 +50,18 @@ function Header() {
       ];
 
       const navigate = useNavigate();
+
+      const [showNavbar, setShowNavbar] = useState(true);
+
+      const toggleShowNavbar = () => {
+            setShowNavbar(!showNavbar);
+      };
+
       return (
             <header className={cx('wrapper')}>
                   <div className="container">
                         <div className={cx('header-inner')}>
-                              <button className={cx('more-btn')}>
+                              <button className={cx('more-btn')} onClick={toggleShowNavbar}>
                                     <img alt="" src={icons.menu} />
                               </button>
                               <div className="logo" onClick={() => navigate('/')}>
@@ -61,7 +69,7 @@ function Header() {
                                     <h2 className="logo__title">PixelPro</h2>
                               </div>
 
-                              <div className="navbar">
+                              <div className={`navbar ${showNavbar === true ? 'show' : 'hide'}`}>
                                     <ul className="navbar__list">
                                           {NAVBAR_ITEMS.map((item) => (
                                                 <li
@@ -70,6 +78,9 @@ function Header() {
                                                       //       onClick={() => navigate(item.path)}
                                                 >
                                                       <div className="navbar__link">
+                                                            <span
+                                                                  className={`d-none d-lg-block navbar__dot ${item.title}`}
+                                                            ></span>
                                                             <span>{item.title}</span>
                                                             {item.children ? (
                                                                   <>
@@ -116,7 +127,23 @@ function Header() {
                                                 </li>
                                           ))}
                                     </ul>
+
+                                    <div className="d-none d-lg-block">
+                                          <div className="navbar__separate"></div>
+                                          <div className="d-none d-lg-flex navbar__upload-file">
+                                                <img alt="" src={icons.uploadFile} />
+                                                <span>Drag-n-Drop to upload</span>
+                                          </div>
+                                          <div className="navbar__bottom">
+                                                <div className="navbar__group-btn">
+                                                      <button>Sign in</button>
+                                                      <button>Sign up</button>
+                                                </div>
+                                                <img alt="" src={icons.logo} />
+                                          </div>
+                                    </div>
                               </div>
+                              <div onClick={toggleShowNavbar} className="navbar__overlay"></div>
 
                               <div className={cx('top-actions')}>
                                     <div className={cx('top-actions__inner')}>

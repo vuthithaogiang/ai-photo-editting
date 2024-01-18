@@ -22,3 +22,12 @@ select {
       font-size: inherit;
       color: inherit;
 }
+
+a,
+button,
+select,
+textarea,
+li,
+span {
+      -webkit-tap-highlight-color: transparent;
+}

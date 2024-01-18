@@ -3,9 +3,65 @@
 .navbar {
       position: relative;
 
+      @include abstract.breakpoint(lg) {
+            padding: 20px 0;
+            position: fixed;
+            inset: 0 50% 0 0;
+            background-color: #1a1c20;
+            z-index: 20;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            transition: transform 0.4s;
+      }
+      @include abstract.breakpoint(md) {
+            inset: 0 20% 0 0;
+      }
+
+      &__overlay {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity, visibility;
+            transition-duration: 0.4s;
+
+            // @include abstract.breakpoint(lg) {
+            //       position: fixed;
+            //       inset: 0;
+
+            //       background-color: rgba(#000, 0.6);
+            //       z-index: 19;
+            // }
+      }
+
+      &.show {
+            @include abstract.breakpoint(lg) {
+                  transform: translateX(0%);
+            }
+      }
+
+      &.show ~ &__overlay {
+            @include abstract.breakpoint(lg) {
+                  position: fixed;
+                  inset: 0;
+                  visibility: visible;
+                  opacity: 1;
+                  background-color: rgba(#000, 0.6);
+                  z-index: 19;
+            }
+      }
+
       &__list {
             display: flex;
             align-items: center;
+
+            @include abstract.breakpoint(lg) {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-left: -20px;
+                  margin-right: 20px;
+            }
       }
       &__icon {
             display: block;
@@ -13,10 +69,29 @@
             opacity: 0;
             transition: visibility, opacity;
             transition-duration: 0.3s;
+
+            @include abstract.breakpoint(lg) {
+                  visibility: visible;
+                  opacity: 1;
+                  rotate: -90deg;
+                  width: 11px;
+                  margin-left: auto;
+            }
+      }
+
+      &__item {
+            @include abstract.breakpoint(lg) {
+                  width: 100%;
+                  // background-color: red;
+            }
       }
 
       &__item:hover div.dropdown {
             display: block !important;
+
+            @include abstract.breakpoint(lg) {
+                  // display: none !important;
+            }
       }
 
       &__link {
@@ -24,13 +99,24 @@
             align-items: center;
             gap: 4px;
             padding: 5px 18px;
+            border-radius: 38px;
             cursor: pointer;
+
+            @include abstract.breakpoint(lg) {
+                  padding: 10px 20px;
+
+                  border-radius: 10px;
+            }
 
             span {
                   display: block;
                   font-size: 1.6rem;
                   font-weight: 400;
                   line-height: 1.75;
+
+                  @include abstract.breakpoint(lg) {
+                        font-size: 1.7rem;
+                  }
             }
       }
 
@@ -40,11 +126,111 @@
       }
 
       &__link:hover {
-            border-radius: 38px;
             background: rgba(255, 255, 255, 0.1);
       }
 
+      &__dot {
+            @include abstract.breakpoint(lg) {
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 2px;
+                  margin-right: 12px;
+
+                  &.Products {
+                        background-color: #aac4df;
+                  }
+
+                  &.Pricing {
+                        background-color: #b998fc;
+                  }
+
+                  &.API {
+                        background-color: #b0d2ae;
+                  }
+
+                  &.Blog {
+                        background-color: #e78b61;
+                  }
+            }
+      }
+
       @include abstract.breakpoint(lg) {
-            display: none;
+            &__separate {
+                  display: block;
+                  width: 100%;
+                  height: 1px;
+                  background-color: #3b3c3e;
+                  border-radius: 2px;
+                  margin: 10px 0 30px 0;
+            }
+
+            &__upload-file {
+                  width: 90%;
+                  background-color: #000;
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: auto;
+                  margin-right: auto;
+                  align-items: center;
+                  padding: 38px 0;
+                  gap: 16px;
+                  border-radius: 16px;
+                  border: 2.5px dashed #26282c;
+
+                  img {
+                        width: 46px;
+                        filter: brightness(0) saturate(100%) invert(22%) sepia(46%) saturate(6162%) hue-rotate(213deg)
+                              brightness(96%) contrast(99%);
+                  }
+            }
+
+            &__bottom {
+                  width: 90%;
+                  margin-top: 20px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 18px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: 50px;
+
+                  img {
+                        width: 20px;
+                  }
+            }
+            &__group-btn {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  height: 100%;
+                  flex: 1;
+                  background-color: #000;
+                  gap: 8px;
+                  border-radius: 10px;
+
+                  button {
+                        flex: 1;
+                        text-align: center;
+                        height: 100%;
+                  }
+
+                  button:nth-child(1) {
+                        background-color: #2d2f32;
+                        margin: 3px;
+                        height: calc(100% - 6px);
+                        border-radius: 6px;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        color: #fff;
+                  }
+                  button:nth-child(2) {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        color: #ccc;
+                  }
+            }
       }
 }
