@@ -4,6 +4,7 @@ import Services from './Services';
 import Features from './Features';
 import Reviews from './Reviews';
 import Blogs from '~/components/Blogs';
+import QuestionsAndAnswers from '~/components/QuestionsAndAnswers';
 
 function Home() {
       return (
@@ -14,6 +15,7 @@ function Home() {
                   <Features />
                   <Reviews />
                   <Blogs />
+                  <QuestionsAndAnswers />
             </main>
       );
 }

@@ -23,6 +23,8 @@ const icons = {
       logoReview1: require('./logo-review-1.svg').default,
       logoReview2: require('./logo-review-2.svg').default,
       logoReview3: require('./logo-review-3.svg').default,
+      plus: require('./plus.svg').default,
+      minus: require('./minus.svg').default,
 };
 
 export default icons;
