@@ -10,7 +10,7 @@
       @include abstract.breakpoint(lg) {
             position: initial;
             padding-top: 10px;
-            display: block;
+            //  display: block;
             //  padding-left: 20px;
             padding-bottom: 10px;
       }
@@ -77,4 +77,14 @@
                   font-size: 1.4rem;
             }
       }
+}
+
+@include abstract.breakpoint(lg) {
+      .dropdown.show {
+            display: block !important;
+      }
+
+      // .dropdown.hide {
+      //       display: none !important;
+      // }
 }

@@ -51,11 +51,30 @@ function Header() {
 
       const navigate = useNavigate();
 
-      const [showNavbar, setShowNavbar] = useState(true);
+      const [showNavbar, setShowNavbar] = useState(false);
+      const [showDropdown, setShowDropdown] = useState(false);
 
       const toggleShowNavbar = () => {
             setShowNavbar(!showNavbar);
       };
+
+      const toggleShowDropdown = () => {
+            if (document.body.clientWidth > 769) {
+                  return;
+            }
+
+            setShowDropdown(!showDropdown);
+      };
+
+      //  useEffect(() => {
+      //      if(showDropdown) {
+      //       dropdownRef
+
+      //      }
+      //      else{
+
+      //      }
+      // }, [showDropdown]);
 
       return (
             <header className={cx('wrapper')}>
@@ -75,7 +94,13 @@ function Header() {
                                                 <li
                                                       className="navbar__item"
                                                       key={item.title}
-                                                      //       onClick={() => navigate(item.path)}
+                                                      onClick={() => {
+                                                            if (item.title === 'Products') {
+                                                                  toggleShowDropdown();
+                                                            } else {
+                                                                  //navigate(item.path);
+                                                            }
+                                                      }}
                                                 >
                                                       <div className="navbar__link">
                                                             <span
@@ -87,7 +112,11 @@ function Header() {
                                                                         <img
                                                                               alt=""
                                                                               src={icons.arrowDown}
-                                                                              className="navbar__icon"
+                                                                              className={
+                                                                                    showDropdown
+                                                                                          ? 'navbar__icon rotate'
+                                                                                          : 'navbar__icon'
+                                                                              }
                                                                         />
                                                                   </>
                                                             ) : (
@@ -97,7 +126,13 @@ function Header() {
 
                                                       {item.children ? (
                                                             <>
-                                                                  <div className="dropdown">
+                                                                  <div
+                                                                        className={
+                                                                              showDropdown
+                                                                                    ? 'dropdown show'
+                                                                                    : 'dropdown hide'
+                                                                        }
+                                                                  >
                                                                         <div className="dropdown__inner">
                                                                               <div className="dropdown__list">
                                                                                     {item.children.map((subLink) => (

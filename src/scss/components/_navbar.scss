@@ -71,11 +71,19 @@
             transition-duration: 0.3s;
 
             @include abstract.breakpoint(lg) {
+                  transition: rotate 0.4s;
                   visibility: visible;
                   opacity: 1;
                   rotate: -90deg;
                   width: 11px;
                   margin-left: auto;
+            }
+      }
+
+      &__icon.rotate {
+            transition: rotate 0.4s;
+            @include abstract.breakpoint(lg) {
+                  rotate: 0deg;
             }
       }
 
@@ -87,10 +95,10 @@
       }
 
       &__item:hover div.dropdown {
-            display: block !important;
+            display: block;
 
             @include abstract.breakpoint(lg) {
-                  // display: none !important;
+                  display: none;
             }
       }
 
@@ -104,7 +112,6 @@
 
             @include abstract.breakpoint(lg) {
                   padding: 10px 20px;
-
                   border-radius: 10px;
             }
 
@@ -131,8 +138,8 @@
 
       &__dot {
             @include abstract.breakpoint(lg) {
-                  width: 8px;
-                  height: 8px;
+                  width: 9px;
+                  height: 9px;
                   border-radius: 2px;
                   margin-right: 12px;
 

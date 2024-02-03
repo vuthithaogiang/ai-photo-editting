@@ -1248,11 +1248,20 @@ span {
 }
 @media (max-width: 991.98px) {
   .navbar__icon {
+    transition: rotate 0.4s;
     visibility: visible;
     opacity: 1;
     rotate: -90deg;
     width: 11px;
     margin-left: auto;
+  }
+}
+.navbar__icon.rotate {
+  transition: rotate 0.4s;
+}
+@media (max-width: 991.98px) {
+  .navbar__icon.rotate {
+    rotate: 0deg;
   }
 }
 @media (max-width: 991.98px) {
@@ -1261,7 +1270,12 @@ span {
   }
 }
 .navbar__item:hover div.dropdown {
-  display: block !important;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .navbar__item:hover div.dropdown {
+    display: none;
+  }
 }
 .navbar__link {
   display: flex;
@@ -1297,8 +1311,8 @@ span {
 }
 @media (max-width: 991.98px) {
   .navbar__dot {
-    width: 8px;
-    height: 8px;
+    width: 9px;
+    height: 9px;
     border-radius: 2px;
     margin-right: 12px;
   }
@@ -1435,7 +1449,6 @@ span {
   .dropdown {
     position: initial;
     padding-top: 10px;
-    display: block;
     padding-bottom: 10px;
   }
 }
@@ -1498,6 +1511,11 @@ span {
   }
 }
 
+@media (max-width: 991.98px) {
+  .dropdown.show {
+    display: block !important;
+  }
+}
 .service-card {
   padding: 60px 0;
 }

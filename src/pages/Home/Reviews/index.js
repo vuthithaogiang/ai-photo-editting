@@ -112,11 +112,13 @@ function Reviews() {
             const childrenElementCount = slideRef.current.childElementCount;
             const width = scrollWidth / childrenElementCount;
             setWidth(width);
-            // console.log(width);
+            //console.log(width);
       }, []);
 
       useEffect(() => {
             if (!slideRef.current || !width) return;
+
+            // slideRef.current.unmount();
 
             if (document.body.clientWidth < 769) {
                   let numOfthumb = Math.round(slideRef.current.offsetWidth / width);
@@ -128,6 +130,7 @@ function Reviews() {
       }, [width, slideIndex]);
 
       useEffect(() => {
+            //Tablet and Mobile
             if (document.body.clientWidth < 769) {
                   setSlideIndex(1);
             }
