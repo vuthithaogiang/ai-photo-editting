@@ -1184,7 +1184,7 @@ span {
 }
 
 .navbar {
-  position: relative;
+  flex: 1;
 }
 @media (max-width: 991.98px) {
   .navbar {
@@ -1230,6 +1230,8 @@ span {
 .navbar__list {
   display: flex;
   align-items: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 @media (max-width: 991.98px) {
   .navbar__list {
@@ -1440,16 +1442,16 @@ span {
 
 .dropdown {
   position: absolute;
-  left: -94px;
   padding-top: 18px;
   display: none;
-  min-width: 100%;
+  transform: translateX(-25%);
 }
 @media (max-width: 991.98px) {
   .dropdown {
     position: initial;
     padding-top: 10px;
     padding-bottom: 10px;
+    transform: translateX(0);
   }
 }
 .dropdown__inner {

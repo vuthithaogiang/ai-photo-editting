@@ -1,7 +1,8 @@
 @use '../abstract';
 
 .navbar {
-      position: relative;
+      flex: 1;
+      //position: relative;
 
       @include abstract.breakpoint(lg) {
             padding: 20px 0;
@@ -55,6 +56,8 @@
       &__list {
             display: flex;
             align-items: center;
+            width: fit-content;
+            margin: 0 auto;
 
             @include abstract.breakpoint(lg) {
                   flex-direction: column;

@@ -2,10 +2,11 @@
 
 .dropdown {
       position: absolute;
-      left: -94px;
+      //left: -94px;
       padding-top: 18px;
       display: none;
-      min-width: 100%;
+
+      transform: translateX(-25%);
 
       @include abstract.breakpoint(lg) {
             position: initial;
@@ -13,6 +14,7 @@
             //  display: block;
             //  padding-left: 20px;
             padding-bottom: 10px;
+            transform: translateX(0);
       }
 
       &__inner {
