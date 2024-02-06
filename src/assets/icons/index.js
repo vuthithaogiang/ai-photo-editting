@@ -28,6 +28,8 @@ const icons = {
       appleStore: require('./apple-store.svg').default,
       googlePlay: require('./google-play.svg').default,
       uploadFile: require('./upload-file.svg').default,
+      plusWhite: require('./plus-white.svg').default,
+      arrowDownSmall: require('./arrow-down-small.svg').default,
 };
 
 export default icons;

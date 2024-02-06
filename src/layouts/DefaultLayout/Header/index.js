@@ -16,22 +16,22 @@ function Header() {
                         {
                               subTitle: 'Remove BG',
                               thumb: images.removeBgThumb,
-                              path: '/',
+                              path: '/remove-background',
                         },
                         {
                               subTitle: 'Remove Objects',
                               thumb: images.removeObjetsThumb,
-                              path: '/',
+                              path: '/remove-objects',
                         },
                         {
                               subTitle: 'Upscale',
                               thumb: images.upscaleThumb,
-                              path: '/',
+                              path: '/upscale',
                         },
                         {
                               subTitle: 'Relight',
                               thumb: images.relightThumb,
-                              path: '/',
+                              path: '/relight',
                         },
                   ],
             },
@@ -139,6 +139,11 @@ function Header() {
                                                                                           <div
                                                                                                 key={subLink.subTitle}
                                                                                                 className="dropdown__wrap-thumb"
+                                                                                                onClick={() =>
+                                                                                                      navigate(
+                                                                                                            subLink.path,
+                                                                                                      )
+                                                                                                }
                                                                                           >
                                                                                                 <img
                                                                                                       alt=""

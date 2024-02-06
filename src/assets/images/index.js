@@ -17,6 +17,14 @@ const images = {
       blogThumbnail2: require('./blog-thumbnail-2.png'),
       authorBlogAvatar1: require('./author-blog-avatar-1.png'),
       authorBlogAvatar2: require('./author-blog-avatar-2.png'),
+      image1: require('./image-1.png'),
+      image2: require('./image-2.png'),
+      image3: require('./image-3.png'),
+      image4: require('./image-4.png'),
+      imageEdit1: require('./image-edit-1.png'),
+      imageEdit2: require('./image-edit-2.png'),
+      imageEdit3: require('./image-edit-3.png'),
+      imageEdit4: require('./image-edit-4.png'),
 };
 
 export default images;
