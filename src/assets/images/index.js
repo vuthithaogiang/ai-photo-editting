@@ -28,6 +28,12 @@ const images = {
       uploadImage: require('./upload-image.png'),
       removeBgAutomaticallyImage: require('./remove-bg-automatically.png'),
       cutOutDownloadImage: require('./image-cut-out-download.png'),
+
+      peopleRemoveBackgroundThumbnail: require('./People remove background.png'),
+      animalRemoveBackgroundThumbnail: require('./Animal remove background.png'),
+      productRemoveBackgroundThumbnail: require('./Product remove background.png'),
+      iconRemoveBackgroundThumbnail: require('./Icon remove background.png'),
+      objectRemoveBackgroundThumbnail: require('./Object remove background.png'),
 };
 
 export default images;

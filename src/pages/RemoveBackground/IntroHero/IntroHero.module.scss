@@ -1,0 +1,142 @@
+@use '/src/scss/abstract/' as abstract;
+
+.wrapper {
+      padding: 100px 0;
+
+      @include abstract.breakpoint(lg) {
+            padding: 60px 0;
+      }
+
+      @include abstract.breakpoint(md) {
+            padding: 30px 0;
+      }
+}
+
+.heading {
+      color: var(--White-White, #fff);
+      text-align: center;
+      font-size: 7.2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2;
+      width: min(970px, 100%);
+      margin: 0 auto;
+
+      @include abstract.breakpoint(lg) {
+            font-size: 5.4rem;
+      }
+
+      @include abstract.breakpoint(md) {
+            font-size: 3.4rem;
+      }
+
+      strong {
+            background: linear-gradient(92deg, #ac2ef8 48.36%, #ff5993 91.36%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 7.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.2;
+
+            @include abstract.breakpoint(lg) {
+                  font-size: 5.4rem;
+            }
+            @include abstract.breakpoint(md) {
+                  font-size: 3.4rem;
+            }
+      }
+}
+
+.desc {
+      margin-top: 18px;
+      color: var(--White-White-200, #c3c3c3);
+      text-align: center;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.75;
+      width: min(880px, 100%);
+      margin-left: auto;
+      margin-right: auto;
+
+      @include abstract.breakpoint(md) {
+            font-size: 1.4rem;
+            margin-top: 12px;
+            text-align: left;
+      }
+}
+
+.thumbnail {
+      width: min(970px, 100%);
+      display: block;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include abstract.breakpoint(md) {
+            height: 360px;
+      }
+}
+
+.tabs {
+      margin-top: 36px;
+      margin-bottom: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      overflow: scroll;
+
+      @include abstract.breakpoint(md) {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            justify-content: flex-start;
+            gap: 10px;
+      }
+}
+
+.nav-tab {
+      flex-shrink: 0;
+      button {
+            color: var(--White-White, #fff);
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.75;
+            height: 44px;
+            padding: 0 26px;
+            border-radius: 30px;
+            border: 1px solid var(--White-White-200, #c3c3c3);
+            cursor: pointer;
+      }
+      &.active {
+            button {
+                  color: #000;
+                  background-color: #fff;
+            }
+      }
+}
+
+.btn {
+      margin-top: 60px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      button {
+            color: var(--White-White, #fff);
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.75;
+            cursor: pointer;
+            height: 52px;
+            border-radius: 25px;
+            background: var(--Navy-Blue, #0058ff);
+            padding: 0 32px;
+      }
+}
