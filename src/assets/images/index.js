@@ -25,6 +25,9 @@ const images = {
       imageEdit2: require('./image-edit-2.png'),
       imageEdit3: require('./image-edit-3.png'),
       imageEdit4: require('./image-edit-4.png'),
+      uploadImage: require('./upload-image.png'),
+      removeBgAutomaticallyImage: require('./remove-bg-automatically.png'),
+      cutOutDownloadImage: require('./image-cut-out-download.png'),
 };
 
 export default images;

@@ -30,6 +30,8 @@ const icons = {
       uploadFile: require('./upload-file.svg').default,
       plusWhite: require('./plus-white.svg').default,
       arrowDownSmall: require('./arrow-down-small.svg').default,
+      download: require('./download.png'),
+      uploadBtn: require('./upload-btn.svg').default,
 };
 
 export default icons;

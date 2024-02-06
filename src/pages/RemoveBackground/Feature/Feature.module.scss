@@ -2,9 +2,11 @@
 
 .wrapper {
       margin-top: 52px;
+      margin-bottom: 100px;
 
       @include abstract.breakpoint(lg) {
             margin-top: 30px;
+            margin-bottom: 40px;
       }
 }
 
