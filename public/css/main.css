@@ -1858,6 +1858,9 @@ span {
   font-weight: 600;
   line-height: 28px; /* 175% */
 }
+.form__button.disable {
+  opacity: 0.6;
+}
 
 .auth {
   display: flex;
