@@ -89,14 +89,29 @@
       justify-content: center;
       gap: 16px;
       width: 100%;
-      overflow: scroll;
+      // overflow: scroll;
 
       @include abstract.breakpoint(md) {
             margin-top: 20px;
             margin-bottom: 30px;
             justify-content: flex-start;
             gap: 10px;
+            //  width: 90%;
+            //  background-color: #ff5993;
+            margin-left: auto;
+            margin-right: auto;
+
+            overflow: auto;
+
+            scroll-behavior: smooth;
+            -ms-overflow-style: none; /* Hide scrollbar for Edge */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -webkit-overflow-scrolling: touch; /* Enables momentum-based scrolling in iOS Safari */
       }
+}
+
+.tabs::-webkit-scrollbar {
+      display: none;
 }
 
 .nav-tab {
@@ -112,6 +127,7 @@
             border-radius: 30px;
             border: 1px solid var(--White-White-200, #c3c3c3);
             cursor: pointer;
+            width: 120px;
       }
       &.active {
             button {
