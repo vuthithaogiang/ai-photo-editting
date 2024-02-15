@@ -38,6 +38,7 @@
 
       &__control {
             flex: 1;
+            height: 100%;
       }
 
       &__label {
@@ -93,6 +94,11 @@
       }
 
       &__error {
+            margin-top: 8px;
+            margin-left: 12px;
+            color: red;
+            font-size: 1.2rem;
+            font-style: italic;
       }
 
       &__button {
