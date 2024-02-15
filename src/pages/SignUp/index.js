@@ -231,14 +231,20 @@ function SignUp() {
                                                       </div>
                                                 </div>
 
-                                                <div className="form__group">
+                                                {/* <div className="form__group">
                                                       <div className="form__error">
                                                             You must acccept terms and policy to submit form!
                                                       </div>
-                                                </div>
+                                                </div> */}
 
                                                 <div className="form-group">
-                                                      <div className="form__button">
+                                                      <div
+                                                            className={
+                                                                  !emailValid || !passwordValid || !matchPassword
+                                                                        ? 'form__button disable'
+                                                                        : 'form__button'
+                                                            }
+                                                      >
                                                             <button
                                                                   disabled={
                                                                         !emailValid || !passwordValid || !matchPassword

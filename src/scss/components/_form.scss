@@ -123,4 +123,8 @@
                   line-height: 28px; /* 175% */
             }
       }
+
+      &__button.disable {
+            opacity: 0.6;
+      }
 }
