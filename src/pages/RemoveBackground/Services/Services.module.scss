@@ -1,0 +1,70 @@
+@use '/src/scss/abstract/' as abstract;
+.wrapper {
+      // padding-top: 60px;
+      // padding-bottom: 60px;
+
+      // @include abstract.breakpoint(lg) {
+      //       padding-top: 40px;
+      // }
+
+      // @include abstract.breakpoint(md) {
+      //       padding-top: 30px;
+      // }
+}
+
+.heading {
+      text-align: center;
+      max-width: 970px;
+      margin: 0 auto;
+
+      font-size: 7.2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2;
+      @include abstract.breakpoint(lg) {
+            font-size: 5.4rem;
+      }
+
+      @include abstract.breakpoint(md) {
+            font-size: 3.8rem;
+            text-align: left;
+      }
+      strong {
+            font-size: 7.2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.2;
+            background: linear-gradient(96deg, #ac2ef8 37.51%, #ff5993 86.86%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @include abstract.breakpoint(lg) {
+                  font-size: 5.4rem;
+            }
+
+            @include abstract.breakpoint(md) {
+                  font-size: 3.8rem;
+                  text-align: left;
+            }
+      }
+}
+
+.description {
+      text-align: center;
+      max-width: 480px;
+      margin-top: 18px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #c3c3c3;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.75;
+
+      @include abstract.breakpoint(md) {
+            max-width: 100%;
+            text-align: left;
+            font-size: 1.4rem;
+            margin-top: 10px;
+      }
+}

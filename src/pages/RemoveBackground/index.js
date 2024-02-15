@@ -5,6 +5,8 @@ import Feature from './Feature';
 import HowItWorks from './HowItWorks';
 import IntroHero from './IntroHero';
 import { useEffect } from 'react';
+import Services from './Services';
+import OtherProducts from '~/components/OtherProducts';
 
 const cx = classNames.bind(styles);
 
@@ -18,6 +20,8 @@ function RemoveBackground() {
                   <Feature />
                   <HowItWorks />
                   <IntroHero />
+                  <Services />
+                  <OtherProducts />
                   <QuestionsAndAnswers />
             </div>
       );

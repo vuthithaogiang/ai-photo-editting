@@ -35,7 +35,7 @@ function Services() {
                                           </div>
 
                                           <figure className="service-card__wrap-thumb">
-                                                <img alt="" src={images.serviceThumb1} />
+                                                <img className="img-thumb" alt="" src={images.serviceThumb1} />
                                           </figure>
                                     </div>
                               </div>
@@ -43,7 +43,7 @@ function Services() {
                               <div className="service-card">
                                     <div className="service-card__inner row-not-reverse">
                                           <figure className="service-card__wrap-thumb">
-                                                <img alt="" src={images.serviceThumb2} />
+                                                <img className="img-thumb" alt="" src={images.serviceThumb2} />
                                           </figure>
                                           <div className="service-card__info">
                                                 <h3 className="service-card__title">
@@ -81,7 +81,7 @@ function Services() {
                                           </div>
 
                                           <figure className="service-card__wrap-thumb">
-                                                <img alt="" src={images.serviceThumb3} />
+                                                <img className="img-thumb" alt="" src={images.serviceThumb3} />
                                           </figure>
                                     </div>
                               </div>

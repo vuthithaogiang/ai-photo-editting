@@ -77,7 +77,8 @@
       margin-right: auto;
 
       @include abstract.breakpoint(md) {
-            height: 360px;
+            // height: 360px;
+            border-radius: 10px;
       }
 }
 
@@ -147,7 +148,6 @@
             color: var(--White-White, #fff);
             font-size: 1.6rem;
             font-style: normal;
-            font-weight: 600;
             line-height: 1.75;
             cursor: pointer;
             height: 52px;

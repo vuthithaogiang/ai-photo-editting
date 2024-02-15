@@ -34,6 +34,11 @@ const images = {
       productRemoveBackgroundThumbnail: require('./Product remove background.png'),
       iconRemoveBackgroundThumbnail: require('./Icon remove background.png'),
       objectRemoveBackgroundThumbnail: require('./Object remove background.png'),
+      groupSystems: require('./group-systems.png'),
+
+      productThumb1: require('./product-1.png'),
+      productThumb2: require('./product-2.png'),
+      productThumb3: require('./product-3.png'),
 };
 
 export default images;

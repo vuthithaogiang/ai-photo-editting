@@ -1637,6 +1637,7 @@ span {
 }
 .service-card__btn {
   margin-top: 36px;
+  width: fit-content;
 }
 @media (max-width: 767.98px) {
   .service-card__btn {
@@ -1665,8 +1666,7 @@ span {
   flex: 1;
   flex-shrink: 0;
 }
-.service-card__wrap-thumb img {
-  flex-shrink: 0;
+.service-card__wrap-thumb img.img-thumb {
   width: min(570px, 100%);
   object-fit: cover;
 }
