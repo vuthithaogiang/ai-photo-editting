@@ -7,6 +7,7 @@ import RemoveBackground from '~/pages/RemoveBackground';
 import RemoveObjects from '~/pages/RemoveObjects';
 import Upscale from '~/pages/Upscale';
 import Relight from '~/pages/Relight';
+import SignUp from '~/pages/SignUp';
 
 const publicRoutes = [
       {
@@ -17,6 +18,11 @@ const publicRoutes = [
       {
             path: '/login',
             component: Login,
+            layout: HeaderOnly,
+      },
+      {
+            path: 'signup',
+            component: SignUp,
             layout: HeaderOnly,
       },
       {

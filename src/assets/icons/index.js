@@ -32,6 +32,15 @@ const icons = {
       arrowDownSmall: require('./arrow-down-small.svg').default,
       download: require('./download.png'),
       uploadBtn: require('./upload-btn.svg').default,
+      authLogo: require('./auth-logo.svg').default,
+      images: require('./image.svg').default,
+      code: require('./code.svg').default,
+      vector1: require('./vector-1.svg').default,
+      vector2: require('./vector-2.svg').default,
+      google: require('./google.svg').default,
+      apple: require('./apple.svg').default,
+      facebookWhite: require('./facebook-white.svg').default,
+      eyeSlash: require('./eye-slash.svg').default,
 };
 
 export default icons;

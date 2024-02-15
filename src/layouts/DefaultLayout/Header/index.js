@@ -176,8 +176,8 @@ function Header() {
                                           </div>
                                           <div className="navbar__bottom">
                                                 <div className="navbar__group-btn">
-                                                      <button>Sign in</button>
-                                                      <button>Sign up</button>
+                                                      <button onClick={() => navigate('/login')}>Log in</button>
+                                                      <button onClick={() => navigate('/signup')}>Sign up</button>
                                                 </div>
                                                 <img alt="" src={icons.logo} />
                                           </div>
@@ -187,8 +187,12 @@ function Header() {
 
                               <div className={cx('top-actions')}>
                                     <div className={cx('top-actions__inner')}>
-                                          <button className="button outline small ">Log in </button>
-                                          <button className="button small white">Sign up for free</button>
+                                          <button onClick={() => navigate('/login')} className="button outline small ">
+                                                Log in{' '}
+                                          </button>
+                                          <button onClick={() => navigate('/signup')} className="button small white">
+                                                Sign up for free
+                                          </button>
                                     </div>
                               </div>
                         </div>
